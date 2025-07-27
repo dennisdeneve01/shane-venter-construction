@@ -1,7 +1,5 @@
 {
   "projects": {
-    "default": "shane-venter-construction",
-  },
-  "targets": {},
-  "etags": {}
+    "default": "shane-construction-website"
+  }
 }
