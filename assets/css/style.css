@@ -63,3 +63,48 @@
 .footer-form .placeholder::-ms-input-placeholder {
     color: #adb5bd;
 }
+
+.project-area .project-caption .single-project .project-img,
+.about-area .project-caption .single-project .project-img,
+.contact-section .project-caption .single-project .project-img {
+    /* Define a fixed height for the image container */
+    height: 250px; /* Adjust this value as needed for your desired image height */
+    overflow: hidden; /* Important: Hides any parts of the image that go beyond this height */
+    display: flex; /* Use flexbox to easily center and handle image fitting */
+    align-items: center; /* Vertically center the image within its container */
+    justify-content: center; /* Horizontally center the image within its container */
+}
+
+.project-area .project-caption .single-project .project-img img,
+.about-area .project-caption .single-project .project-img img,
+.contact-section .project-caption .single-project .project-img img {
+    width: 100%; /* Make the image fill the width of its container */
+    height: 100%; /* Make the image fill the height of its container */
+    object-fit: cover; /* CRITICAL: This crops the image to cover the entire container, maintaining aspect ratio */
+    /* object-fit: contain; // Alternative: This scales the image to fit entirely within the container, might leave empty space */
+    
+    /* Ensure no conflicting transitions that might mess with immediate sizing */
+    transition: none; /* Temporarily remove or set to 'none' if issues persist, then re-add if needed */
+}
+
+.support-company-area .right-img img {
+    max-height: 600px; /* Adjust this value to control vertical space */
+    width: auto;      /* CRITICAL: Let the width adjust automatically to maintain aspect ratio */
+    display: block;   /* Important for removing extra space below inline images */
+    margin: 0 auto;   /* Centers the image horizontally within its container */
+    padding-top: 1cm;
+    object-fit: contain; /* Ensures the whole image is visible. Use 'cover' if you want it to fill the space and don't mind cropping. */
+}
+
+.single-services .details-img {
+    max-width: 800px; /* Adjust this value to control the maximum width of the image */
+    margin: 0 auto 40px auto; /* Centers the image container and adds bottom margin */
+    /* The mb-40 class already adds margin-bottom: 40px; but explicit centering is good */
+}
+
+/* Ensure the image inside scales down but keeps its aspect ratio */
+.single-services .details-img img {
+    width: 100%; /* Keeps it responsive within its max-width container */
+    height: auto; /* Ensures aspect ratio is maintained */
+    display: block; /* Removes any extra space below the image */
+}
